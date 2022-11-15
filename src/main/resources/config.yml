@@ -1,0 +1,16 @@
+kafka:
+  serverAddress: localhost:9092
+  sourceGroupId: location-validator-group
+  sourceTopic: location-data
+  sinkTransactionTimeout: 7200000
+  sinkTopicValid: valid-location-data
+  sinkTopicInvalid: invalid-location-data
+flink:
+  restartAttempts: 30
+  restartDelay: 10000
+redis:
+  serverAddress: redis://127.0.0.1:6379
+  password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+  readWriteMap: location_map
+job:
+  speedLimit: 15
